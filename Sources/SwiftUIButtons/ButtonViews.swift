@@ -89,7 +89,7 @@ public struct IconButton: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(.blue, lineWidth: 1)
+                        .stroke(.yellow, lineWidth: 1)
                 )
         }
     }
