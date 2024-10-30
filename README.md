@@ -1,8 +1,6 @@
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
+# SwiftUIButtons
 
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
-
-"hoge"が何かを簡潔に紹介する
+SwiftUIのボタンのライブラリです。
 
 # DEMO
 
@@ -16,8 +14,7 @@
 
 "hoge"を動かすのに必要なライブラリなどを列挙する
 
-* huga 3.5.2
-* hogehuga 1.0.2
+* iOS18以上
 
 # Installation
 
