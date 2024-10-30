@@ -12,17 +12,8 @@ SwiftUIのボタンのライブラリです。
 
 # Requirement
 
-"hoge"を動かすのに必要なライブラリなどを列挙する
-
-* iOS18以上
-
-# Installation
-
-Requirementで列挙したライブラリなどのインストール方法を説明する
-
-```bash
-pip install huga_package
-```
+* iOS10.0以上
+* macOS14.0以上
 
 # Usage
 
@@ -42,15 +33,10 @@ python demo.py
 
 作成情報を列挙する
 
-* 作成者
-* 所属
-* E-mail
+* Kazuyuki Watanabe
+* 九州産業大学理工学部情報科学科
+* k21rs143@st.kyusan-u.ac.jp
 
 # License
-ライセンスを明示する
 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
-
-社内向けなら社外秘であることを明示してる
-
-"hoge" is Confidential.
+SwiftUIButtons is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
