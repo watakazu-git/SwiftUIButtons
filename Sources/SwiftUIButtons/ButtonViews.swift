@@ -95,17 +95,20 @@ public struct IconButton: View {
     }
 }
 
+// MARK: - Material Design
+
 @available(iOS 18.0, macOS 14.0, *)
 public struct PrimaryButton: View {
     let text: String
     let action: () -> Void
 
-    var textColor: Color = .white
+    let textColor: Color
     var backgroundColor: Color = .blue
 
-    public init(text: String, action: @escaping () -> Void) {
+    public init(text: String, action: @escaping () -> Void, textColor: Color) {
         self.text = text
         self.action = action
+        self.textColor = textColor
     }
 
     public var body: some View {
