@@ -28,4 +28,9 @@ public struct ButtonPackage {
     public static func primaryButton(text: String, action: @escaping () -> Void, textColor: Color = .blue) -> some View {
         PrimaryButton(text: text, action: action, textColor: textColor)
     }
+
+    @MainActor
+        public static func elevatedButton(text: String, action: @escaping () -> Void) -> some View {
+            ElevatedButton(text: text, action: action)
+        }
 }

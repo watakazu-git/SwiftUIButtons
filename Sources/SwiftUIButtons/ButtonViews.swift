@@ -124,3 +124,31 @@ public struct PrimaryButton: View {
         }
     }
 }
+
+// TODO: Change Button Design
+
+@available(iOS 18.0, macOS 14.0, *)
+public struct ElevatedButton: View {
+    let text: String
+    let action: () -> Void
+
+    var textColor: Color = Color(red: 0.41, green: 0.33, blue: 0.59)
+
+    public init(text: String, action: @escaping () -> Void) {
+        self.text = text
+        self.action = action
+    }
+
+    public var body: some View {
+        Button(action: action) {
+            Text(text)
+                .padding()
+                .foregroundStyle(textColor)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .foregroundStyle(.white)
+                )
+        }
+    }
+}
+
