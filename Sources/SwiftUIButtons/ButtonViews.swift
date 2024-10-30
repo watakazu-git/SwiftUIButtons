@@ -1,25 +1,25 @@
 import SwiftUI
 
-@available(iOS 18.0, macOS 14.0, *)
-public struct PrimaryButton: View {
-    var text: String
-    var action: () -> Void
-
-    public init(text: String, action: @escaping () -> Void) {
-        self.text = text
-        self.action = action
-    }
-
-    public var body: some View {
-        Button(action: action) {
-            Text(text)
-                .foregroundStyle(.white)
-                .padding()
-                .background(.blue)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-        }
-    }
-}
+//@available(iOS 18.0, macOS 14.0, *)
+//public struct PrimaryButton: View {
+//    var text: String
+//    var action: () -> Void
+//
+//    public init(text: String, action: @escaping () -> Void) {
+//        self.text = text
+//        self.action = action
+//    }
+//
+//    public var body: some View {
+//        Button(action: action) {
+//            Text(text)
+//                .foregroundStyle(.white)
+//                .padding()
+//                .background(.blue)
+//                .clipShape(RoundedRectangle(cornerRadius: 8))
+//        }
+//    }
+//}
 
 @available(iOS 18.0, macOS 14.0, *)
 public struct SecondaryButton: View {
@@ -91,6 +91,33 @@ public struct IconButton: View {
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(.yellow, lineWidth: 1)
                 )
+        }
+    }
+}
+
+@available(iOS 18.0, macOS 14.0, *)
+public struct PrimaryButton: View {
+    let text: String
+    let action: () -> Void
+
+    var textColor: Color = .white
+    var backgroundColor: Color = .blue
+
+    public init(text: String, action: @escaping () -> Void) {
+        self.text = text
+        self.action = action
+    }
+
+    public var body: some View {
+        Button(action: action) {
+            Text(text)
+                .padding()
+                .foregroundStyle(textColor)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .foregroundStyle(backgroundColor)
+                )
+
         }
     }
 }
