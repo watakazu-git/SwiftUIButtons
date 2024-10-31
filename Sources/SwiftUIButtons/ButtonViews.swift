@@ -114,8 +114,8 @@ public struct PrimaryButton: View {
     public var body: some View {
         Button(action: action) {
             Text(text)
-                .padding()
                 .foregroundStyle(textColor)
+                .padding()
                 .background(
                     RoundedRectangle(cornerRadius: 8)
                         .foregroundStyle(backgroundColor)
