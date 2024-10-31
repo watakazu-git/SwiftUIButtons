@@ -113,11 +113,14 @@ public struct ElevatedButton: View {
     let text: String
     let action: () -> Void
 
-    var textColor: Color = Color(red: 0.41, green: 0.33, blue: 0.59)
+    let textColor: Color
+    let backgroundColor: Color
 
     public init(text: String, action: @escaping () -> Void) {
         self.text = text
         self.action = action
+        self.textColor = .white
+        self.backgroundColor = .black
     }
 
     public var body: some View {
@@ -127,7 +130,7 @@ public struct ElevatedButton: View {
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius: 32)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(backgroundColor)
                         .shadow(radius: 2, y: 4)
                 )
         }
