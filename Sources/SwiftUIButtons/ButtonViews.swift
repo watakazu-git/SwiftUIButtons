@@ -116,11 +116,11 @@ public struct ElevatedButton: View {
     let textColor: Color
     let backgroundColor: Color
 
-    public init(text: String, action: @escaping () -> Void) {
+    public init(text: String, action: @escaping () -> Void, textColor: Color, backgroundColor: Color) {
         self.text = text
         self.action = action
-        self.textColor = .white
-        self.backgroundColor = .black
+        self.textColor = textColor
+        self.backgroundColor = backgroundColor
     }
 
     public var body: some View {
