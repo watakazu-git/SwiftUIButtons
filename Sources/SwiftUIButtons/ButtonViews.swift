@@ -112,26 +112,34 @@ public struct ElevatedButton: View {
     let text: String
     let action: () -> Void
 
+    // Optional Properties
     let textColor: Color
     let backgroundColor: Color
+    let systemName: String
 
-    public init(text: String, action: @escaping () -> Void, textColor: Color, backgroundColor: Color) {
+    public init(text: String, action: @escaping () -> Void, textColor: Color, backgroundColor: Color, systemName: String) {
         self.text = text
         self.action = action
         self.textColor = textColor
         self.backgroundColor = backgroundColor
+        self.systemName = systemName
     }
 
     public var body: some View {
         Button(action: action) {
-            Text(text)
-                .foregroundStyle(textColor)
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 32)
-                        .foregroundStyle(backgroundColor)
-                        .shadow(radius: 2, y: 4)
-                )
+            HStack {
+                Image(systemName: systemName)
+                    .foregroundStyle(textColor)
+
+                Text(text)
+                    .foregroundStyle(textColor)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 32)
+                            .foregroundStyle(backgroundColor)
+                            .shadow(radius: 2, y: 4)
+                    )
+            }
         }
     }
 }
