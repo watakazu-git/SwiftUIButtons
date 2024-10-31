@@ -31,4 +31,9 @@ public struct ButtonPackage {
     public static func elevatedButton(text: String, action: @escaping () -> Void, textColor: Color = Color(red: 0.41, green: 0.33, blue: 0.59), backgroundColor: Color = .white) -> some View {
         ElevatedButton(text: text, action: action, textColor: textColor, backgroundColor: backgroundColor)
         }
+
+    @MainActor
+    public static func filledButton(text: String, action: @escaping () -> Void, textColor: Color = Color(red: 0.41, green: 0.33, blue: 0.59), backgroundColor: Color = .white) -> some View {
+        ElevatedButton(text: text, action: action, textColor: textColor, backgroundColor: backgroundColor)
+        }
 }

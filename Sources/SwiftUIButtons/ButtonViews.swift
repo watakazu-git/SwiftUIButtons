@@ -135,3 +135,31 @@ public struct ElevatedButton: View {
         }
     }
 }
+
+@available(iOS 18.0, macOS 14.0, *)
+public struct FilledButton: View {
+    let text: String
+    let action: () -> Void
+
+    let textColor: Color
+    let backgroundColor: Color
+
+    public init(text: String, action: @escaping () -> Void, textColor: Color, backgroundColor: Color) {
+        self.text = text
+        self.action = action
+        self.textColor = textColor
+        self.backgroundColor = backgroundColor
+    }
+
+    public var body: some View {
+        Button(action: action) {
+            Text(text)
+                .foregroundStyle(textColor)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 32)
+                        .foregroundStyle(backgroundColor)
+                )
+        }
+    }
+}
