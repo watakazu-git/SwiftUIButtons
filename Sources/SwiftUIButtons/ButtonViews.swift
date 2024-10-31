@@ -1,25 +1,6 @@
 import SwiftUI
 
-//@available(iOS 18.0, macOS 14.0, *)
-//public struct PrimaryButton: View {
-//    var text: String
-//    var action: () -> Void
-//
-//    public init(text: String, action: @escaping () -> Void) {
-//        self.text = text
-//        self.action = action
-//    }
-//
-//    public var body: some View {
-//        Button(action: action) {
-//            Text(text)
-//                .foregroundStyle(.white)
-//                .padding()
-//                .background(.blue)
-//                .clipShape(RoundedRectangle(cornerRadius: 8))
-//        }
-//    }
-//}
+// MARK: - Sample
 
 @available(iOS 18.0, macOS 14.0, *)
 public struct SecondaryButton: View {
@@ -103,12 +84,13 @@ public struct PrimaryButton: View {
     let action: () -> Void
 
     let textColor: Color
-    var backgroundColor: Color = .blue
+    let backgroundColor: Color
 
-    public init(text: String, action: @escaping () -> Void, textColor: Color) {
+    public init(text: String, action: @escaping () -> Void, textColor: Color, backgroundColor: Color) {
         self.text = text
         self.action = action
         self.textColor = textColor
+        self.backgroundColor = backgroundColor
     }
 
     public var body: some View {
