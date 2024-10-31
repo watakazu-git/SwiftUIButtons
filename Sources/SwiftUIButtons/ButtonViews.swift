@@ -108,7 +108,6 @@ public struct PrimaryButton: View {
 }
 
 // TODO: Change Button Design
-
 @available(iOS 18.0, macOS 14.0, *)
 public struct ElevatedButton: View {
     let text: String
@@ -124,13 +123,13 @@ public struct ElevatedButton: View {
     public var body: some View {
         Button(action: action) {
             Text(text)
-                .padding()
                 .foregroundStyle(textColor)
+                .padding()
                 .background(
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: 32)
                         .foregroundStyle(.white)
+                        .shadow(radius: 2, y: 4)
                 )
         }
     }
 }
-
