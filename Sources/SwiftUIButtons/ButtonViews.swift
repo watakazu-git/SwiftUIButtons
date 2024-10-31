@@ -107,7 +107,6 @@ public struct PrimaryButton: View {
     }
 }
 
-// TODO: Change Button Design
 @available(iOS 18.0, macOS 14.0, *)
 public struct ElevatedButton: View {
     let text: String
