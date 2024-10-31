@@ -25,7 +25,7 @@ public struct ButtonPackage {
     //MARK: - Material Design
 
     @MainActor
-    public static func primaryButton(text: String, action: @escaping () -> Void, textColor: Color = .blue) -> some View {
+    public static func primaryButton(text: String, action: @escaping () -> Void, textColor: Color = .white) -> some View {
         PrimaryButton(text: text, action: action, textColor: textColor)
     }
 
